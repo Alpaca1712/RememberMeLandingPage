@@ -4,136 +4,92 @@ A beautiful, emotionally resonant landing page for an AI-powered voice preservat
 
 ## Features
 
-- 🎨 Clean, modern design with dark mode support
+- 🎨 Warm, emotional design focused on grief and memory
 - 📱 Fully responsive for all devices
-- 📝 Two-step form collection:
-  - Initial: Name, email, phone
-  - Follow-up: Interests in voice, animated pictures, or video recreation
+- 📝 Single-step form with interests and details
 - ✉️ Email contact for sending recordings (david@artoo.love)
-- ⚡ Built with Next.js 14 and Tailwind CSS
+- ⚡ Built with Next.js 14, TypeScript, and Tailwind CSS
+- 🔒 Secure Supabase backend with RLS
 - 🚀 Optimized for Vercel deployment
 
-## Getting Started
+## Quick Start
 
-### Installation
+### 1. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Environment Setup
+### 2. Set Up Supabase
 
-1. Create a `.env.local` file in the project root
-2. Add your Supabase credentials:
-   ```bash
-   NEXT_PUBLIC_SUPABASE_URL=your-project-url.supabase.co
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-   ```
-3. See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for detailed setup instructions
+1. Create a project at [supabase.com](https://supabase.com)
+2. Go to **SQL Editor** and run the entire `supabase-setup.sql` file
+3. Get your credentials from **Settings** → **API**
 
-### Development
+### 3. Configure Environment
+
+Create `.env.local`:
+
+```bash
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_ANON_KEY=eyJhbGc... (your long JWT token)
+```
+
+### 4. Run Development Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000)
 
-### Build for Production
+## Deploy to Vercel
 
+1. Push to GitHub
+2. Import in Vercel
+3. Add environment variables in Vercel:
+   - `SUPABASE_URL`
+   - `SUPABASE_ANON_KEY`
+4. Deploy!
+
+Or use CLI:
 ```bash
-npm run build
-npm start
-```
-
-## Deployment to Vercel
-
-This project is optimized for Vercel deployment:
-
-1. Push your code to GitHub
-2. Import the project in Vercel
-3. Vercel will automatically detect Next.js and deploy
-
-Or use the Vercel CLI:
-
-```bash
-npm install -g vercel
 vercel
 ```
+
+## Tech Stack
+
+- **Next.js 14** - App Router, TypeScript
+- **Tailwind CSS** - Styling
+- **Supabase** - PostgreSQL database with RLS
+- **API Routes** - Secure server-side handling
 
 ## Project Structure
 
 ```
 ├── app/
-│   ├── api/
-│   │   └── signup/
-│   │       └── route.ts      # API endpoint for form submissions
-│   ├── page.tsx              # Main landing page component
-│   ├── layout.tsx            # Root layout with metadata
-│   └── globals.css           # Global styles with Tailwind
-├── lib/
-│   └── supabase.ts           # Supabase client configuration
-├── supabase-setup.sql        # Database schema and setup
-├── SUPABASE_SETUP.md         # Detailed Supabase setup guide
-├── package.json
-├── tsconfig.json
-├── tailwind.config.ts
-└── next.config.mjs
+│   ├── api/signup/route.ts  # Form submission endpoint
+│   ├── page.tsx             # Landing page
+│   ├── layout.tsx           # Root layout
+│   └── globals.css          # Styles
+├── lib/supabase.ts          # Supabase client
+├── supabase-setup.sql       # Database schema
+├── .env.local               # Your credentials (gitignored)
+└── package.json
 ```
-
-## Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Backend**: Supabase (PostgreSQL)
-- **Icons**: SVG icons (inline)
-
-## Form Data Collection
-
-The landing page collects:
-
-1. **Initial Contact Info**:
-   - Name
-   - Email
-   - Phone Number
-
-2. **Additional Interests**:
-   - Voice recreation
-   - Animated pictures
-   - Video messages
-   - Optional details/memories
-
-Form submissions are stored in Supabase. See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for complete setup instructions.
 
 ## Security
 
-This project uses a secure API route architecture:
-- Database credentials are server-side only (never exposed to browser)
-- All inserts go through `/api/signup` endpoint
-- Row Level Security (RLS) enabled in Supabase
-- Input validation on the server
-
-See [SECURITY.md](./SECURITY.md) for detailed security architecture.
+- ✅ Server-side only credentials (no `NEXT_PUBLIC_` prefix)
+- ✅ API route handles all database writes
+- ✅ Row Level Security (RLS) enabled
+- ✅ Input validation on server
 
 ## Customization
 
-### Colors
-Update theme colors in `tailwind.config.ts`
-
-### Content
-Edit messaging in `app/page.tsx`
-
-### Metadata
-Update SEO metadata in `app/layout.tsx`
-
-## Documentation
-
-- [README.md](./README.md) - Project overview (you are here)
-- [QUICKSTART.md](./QUICKSTART.md) - 5-minute setup guide
-- [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) - Complete Supabase setup
-- [SECURITY.md](./SECURITY.md) - Security architecture and best practices
-- [REDESIGN_NOTES.md](./REDESIGN_NOTES.md) - Design decisions and changes
+- **Colors**: `tailwind.config.ts`
+- **Content**: `app/page.tsx`
+- **Metadata**: `app/layout.tsx`
 
 ## License
 
