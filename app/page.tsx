@@ -86,13 +86,13 @@ export default function Home() {
               Have voice recordings, videos, or photos you'd like to share?
             </p>
             <a 
-              href="mailto:david@artoo.love"
+              href="mailto:info@artoo.love"
               className="inline-flex items-center text-xl font-semibold text-rose-600 dark:text-rose-400 hover:text-rose-700 dark:hover:text-rose-300 transition-colors"
             >
               <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              david@artoo.love
+              info@artoo.love
             </a>
           </div>
         </div>
@@ -261,13 +261,13 @@ export default function Home() {
         <div className="text-center text-slate-600 dark:text-slate-400">
           <p className="mb-3 text-sm">Already have recordings or photos to share?</p>
           <a 
-            href="mailto:david@artoo.love"
+            href="mailto:info@artoo.love"
             className="inline-flex items-center text-rose-600 dark:text-rose-400 hover:text-rose-700 dark:hover:text-rose-300 transition-colors font-medium"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            Send them to david@artoo.love
+            Send them to info@artoo.love
           </a>
         </div>
       </div>

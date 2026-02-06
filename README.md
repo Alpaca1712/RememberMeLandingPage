@@ -7,7 +7,7 @@ A beautiful, emotionally resonant landing page for an AI-powered voice preservat
 - 🎨 Warm, emotional design focused on grief and memory
 - 📱 Fully responsive for all devices
 - 📝 Single-step form with interests and details
-- ✉️ Email contact for sending recordings (david@artoo.love)
+- ✉️ Email contact for sending recordings (info@artoo.love)
 - ⚡ Built with Next.js 14, TypeScript, and Tailwind CSS
 - 🔒 Secure Supabase backend with RLS
 - 🚀 Optimized for Vercel deployment
